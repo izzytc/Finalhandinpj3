@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Photofeed</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+<script
+
+
+src="http://maps.googleapis.com/maps/api/js">
+
+</script>
+
+<script>
+
+
+var myLatLng=new google.maps.LatLng(-37,175);
+
+function initialize()
+{
+var mapProp = {
+  center:myLatLng,
+  zoom:7,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myLatLng,
+  icon:'5.png'
+  });
+
+marker.setMap(map);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"This is where i took my Photograph in Janurary 2015. I was lucky to catch the sunset at its nicest. Beautiful place to visit, beautiful place to take photo!"
+  });
+
+
+
+infowindow.open(map,marker);
+}
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+</script>
+</head>
+
+<body>
+	<img class="img-responsive center-block" src="img/mapfilm.jpg" alt="film"  style="width:100%; height:350px">
+   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+
+
+
+<div class="img-responsive center-block" id="googleMap" style="width:800px;height:400px;"></div> &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+
+    <div>
+     <a href="index.html" button type="button" class="btn btn-info btn-sm center-block" >Home</button>
+     <a href="myprofile.html" button type="button" class="btn btn-info btn-sm center-block">Blog</button>
+       <a href="Photofeed.html" button type="button" class="btn btn-info btn-sm center-block">Photofeed</button>
+
+
+     </a>
+     </div>
+      &nbsp  &nbsp  &nbsp  &nbsp  
+     <img class="img-responsive center-block" src="img/mapfilm.jpg" alt="film"  style="width:100%; height:350px">
+     
+        
+      
+      </ul>
+    </div>
+</body>
+</html>
